@@ -13,7 +13,9 @@ services:
 
   consumer:
     image: ubuntu:18.04
-    command: php bin/console rabbitmq:consumer metrics
+    command: php bin/console rabbitmq:consumer task
+    depends_on:
+      - rabbitmq
     volumes:
       - ./:/app
 

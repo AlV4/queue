@@ -223,6 +223,12 @@
             "config/packages/sensio_framework_extra.yaml"
         ]
     },
+    "socialtechio/slow-storage-emulator": {
+        "version": "dev-master"
+    },
+    "symfony/amqp-pack": {
+        "version": "v1.0.12"
+    },
     "symfony/asset": {
         "version": "v4.4.2"
     },
@@ -328,6 +334,18 @@
             "ref": "fadbfe33303a76e25cb63401050439aa9b1a9c7f"
         }
     },
+    "symfony/messenger": {
+        "version": "4.3",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "4.3",
+            "ref": "8a2675c061737658bed85102e9241c752620e575"
+        },
+        "files": [
+            "config/packages/messenger.yaml"
+        ]
+    },
     "symfony/mime": {
         "version": "v4.4.2"
     },
@@ -389,6 +407,9 @@
     },
     "symfony/serializer": {
         "version": "v4.4.2"
+    },
+    "symfony/serializer-pack": {
+        "version": "v1.0.2"
     },
     "symfony/service-contracts": {
         "version": "v2.0.1"

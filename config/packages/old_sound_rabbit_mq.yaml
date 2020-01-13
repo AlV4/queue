@@ -1,0 +1,15 @@
+old_sound_rabbit_mq:
+    connections:
+        default:
+            url: '%env(RABBITMQ_URL)%'
+    producers:
+        # use 'old_sound_rabbit_mq.task_producer' service to send data.
+        metrics:
+            connection:       default
+            exchange_options: { name: 'metrics', type: direct }
+    consumers:
+        metrics:
+            connection:       default
+            exchange_options: { name: 'metrics', type: direct }
+            queue_options:    { name: 'metrics'}
+            callback:         App\Consumer\MetricsSenderConsumer

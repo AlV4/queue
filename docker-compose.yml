@@ -8,16 +8,12 @@ services:
       - 80
     ports:
       - 8000:80
-    volumes:
-      - ./:/app
 
   consumer:
     image: ubuntu:18.04
     command: php bin/console rabbitmq:consumer task
     depends_on:
       - rabbitmq
-    volumes:
-      - ./:/app
 
   rabbitmq:
     image: rabbitmq:3.7.5-management

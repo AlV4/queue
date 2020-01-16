@@ -9,3 +9,7 @@
 /var/
 /vendor/
 ###< symfony/framework-bundle ###
+
+###> docker local settings ###
+/docker-compose.override.yml
+###< docker local settings ###
